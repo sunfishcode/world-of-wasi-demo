@@ -1,0 +1,15 @@
+[package]
+name = "echo-server"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+wit-bindgen = { version = "0.4.0", default_features = false }
+
+[lib]
+crate-type = ["cdylib"]
+
+[package.metadata.component]
+target = { path = "../preview2-prototyping/wit", world = "command" }
+
+[package.metadata.component.dependencies]
